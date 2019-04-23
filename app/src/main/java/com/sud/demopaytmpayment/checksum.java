@@ -33,9 +33,9 @@ public class checksum extends AppCompatActivity implements PaytmPaymentTransacti
         orderId = intent.getExtras().getString("orderid");
         custid = intent.getExtras().getString("custid");
 
-       // mid = "hlMhbz06278264408016"; /// your marchant key
+        mid = "hlMhbz06278264408016"; /// your marchant key
 
-        mid="eNnjXe00637647587210";
+        //mid="eNnjXe00637647587210";
         sendUserDetailTOServerdd dl = new sendUserDetailTOServerdd();
         dl.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 // vollye , retrofit, asynch
@@ -48,10 +48,12 @@ public class checksum extends AppCompatActivity implements PaytmPaymentTransacti
 
         //private String orderId , mid, custid, amt;
 
-       // String url ="http://192.168.1.14/paytm/generateChecksum.php";
+        String url ="http://192.168.1.14/paytm/generateChecksum.php";
 
-        String url ="https://www.blueappsoftware.com/payment/payment_paytm/generateChecksum.php";
+      //  String url ="https://www.blueappsoftware.com/payment/payment_paytm/generateChecksum.php";
         String varifyurl = "https://pguat.paytm.com/paytmchecksum/paytmCallback.jsp";
+
+      //  String varifyurl = "https://securegw-stage.paytm.in/theia/paytmCallback?ORDER_ID="+orderId;
                            // "https://securegw-stage.paytm.in/theia/paytmCallback?ORDER_ID"+orderId;
         String CHECKSUMHASH ="";
 
